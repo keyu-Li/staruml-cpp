@@ -878,7 +878,7 @@ function analyze (basePath, options) {
     var stat = fs.lstatSync(base)
     if (stat.isFile()) {
       var ext = path.extname(base).toLowerCase()
-      if (ext === '.cpp' || ext === '.h') {
+      if (ext === '.cpp' || ext === '.hpp') {
         cppAnalyzer.addFile(base)
       }
     } else if (stat.isDirectory()) {
